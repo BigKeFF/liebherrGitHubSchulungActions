@@ -2,7 +2,9 @@ name: GitHub Actions Demo
 
 on: 
   push:
-    branches-ignore:    
+    branches:    
+      - main
+    paths-ignore: 
       - '.github'
       
   workflow_dispatch:
@@ -18,4 +20,4 @@ jobs:
   build:
     runs-on: ubuntu-lastest
     steps:
-      - run: "Hello, World!"
+      - run: echo "Hello, World!"
